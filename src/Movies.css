@@ -1,0 +1,14 @@
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1024px) {
+  .movies-container {
+    grid-template-columns: subgrid;
+    justify-content: stretch;
+    gap: 10px;
+  }
+}

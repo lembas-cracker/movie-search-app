@@ -1,0 +1,75 @@
+.movie-card {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+}
+
+.movie-img-container {
+  display: flex;
+  min-width: 200px;
+  max-width: 200px;
+  justify-content: stretch;
+}
+
+.movie-img-container img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px slategray;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0 10px 0 10px;
+}
+
+.movie-title {
+  margin: 0;
+}
+
+.movie-rating {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.progress-ring {
+  --percentage: 0;
+  width: 40px;
+  height: 40px;
+  background: conic-gradient(#4cc790 calc(var(--percentage) * 1%), #eee calc(var(--percentage) * 1%));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background 0.5s ease;
+  padding: 5px;
+}
+
+.progress-ring::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+}
+
+.rating-text {
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  color: #666;
+}
+
+@media screen and (max-width: 500px) {
+  .movie-card {
+    flex-direction: column;
+  }
+  .movie-info {
+    padding: 0;
+  }
+}
