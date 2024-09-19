@@ -1,0 +1,34 @@
+.sort {
+  margin: 20px 0 0 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.sort-select {
+  padding: 5px;
+  border-color: #d3d3d3;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.sort-option {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.sort-order-btn {
+  padding: 6px 10px 6px 10px;
+  border: 0.5px solid #d3d3d3;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .sort {
+    margin: 0;
+  }
+}
