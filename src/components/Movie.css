@@ -8,6 +8,8 @@
   display: flex;
   min-width: 200px;
   max-width: 200px;
+  min-height: 300px;
+  max-height: 300px;
   justify-content: stretch;
 }
 
@@ -27,18 +29,31 @@
 
 .movie-title {
   margin: 0;
+  flex-wrap: wrap;
+  color: #666;
 }
 
 .movie-rating {
   display: flex;
-  gap: 10px;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.movie-overview {
+  color: #666;
+  font-size: 16px;
+}
+
+.movie-release-date {
+  color: #666;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .progress-ring {
   --percentage: 0;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: conic-gradient(#4cc790 calc(var(--percentage) * 1%), #eee calc(var(--percentage) * 1%));
   border-radius: 50%;
   display: flex;
@@ -52,17 +67,31 @@
 .progress-ring::before {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: white;
   border-radius: 50%;
 }
 
 .rating-text {
   position: absolute;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   color: #666;
+}
+
+.skeleton {
+  background-color: #d3d3d3;
+  border-radius: 8px;
+  display: flex;
+}
+.skeleton-title,
+.skeleton-info {
+  flex: 1;
+  justify-items: center;
+  background-color: #d3d3d3;
+  border-radius: 8px;
+  display: flex;
 }
 
 @media screen and (max-width: 500px) {
@@ -71,5 +100,9 @@
   }
   .movie-info {
     padding: 0;
+  }
+  .movie-title,
+  .movie-rating {
+    margin-top: 10px;
   }
 }
