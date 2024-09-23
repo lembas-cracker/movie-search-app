@@ -35,7 +35,7 @@
 
 .movie-rating {
   display: flex;
-  gap: 30px;
+  gap: 80px;
   justify-content: flex-start;
 }
 
@@ -94,7 +94,7 @@
   display: flex;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
   .movie-card {
     flex-direction: column;
   }
