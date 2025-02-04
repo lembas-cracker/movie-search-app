@@ -56,7 +56,7 @@ export const fetchMoviesByQuery = createAsyncThunk(
   }
 );
 
-interface Movie {
+export interface Movie {
   id: number;
   title: string;
   overview: string;
@@ -65,7 +65,7 @@ interface Movie {
   vote_average: number;
 }
 
-interface MovieState {
+export interface MovieState {
   movies: Movie[];
   filteredMovies: Movie[];
   searchQuery: string;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Pagination.css";
 
-interface PaginationProps {
+export interface PaginationProps {
   currentPage: number;
   moviesPerPage: number;
   totalMovies: number;
@@ -44,7 +44,12 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, moviesPerPage, tot
           {page}
         </button>
       ))}
-      <button className="pagination-button" onClick={handleNextClick} disabled={currentPage === totalPages}>
+      <button
+        role="page-next"
+        className="pagination-button"
+        onClick={handleNextClick}
+        disabled={currentPage === totalPages}
+      >
         <span className="pagination-arrow">&gt;</span>
       </button>
     </div>
