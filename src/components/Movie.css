@@ -16,8 +16,8 @@
 .movie-img-container img {
   object-fit: cover;
   width: 100%;
-  border-radius: 3px;
-  box-shadow: 1px 1px 3px slategray;
+  border-radius: 8px;
+  box-shadow: 2px 1px 5px rgb(151, 157, 164);
 }
 
 .movie-info {
@@ -31,22 +31,25 @@
   margin: 0;
   flex-wrap: wrap;
   color: #666;
+  text-wrap: balance;
 }
 
 .movie-rating {
   display: flex;
   gap: 80px;
-  justify-content: flex-start;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .movie-overview {
   color: #666;
-  font-size: 16px;
+  font-size: 15px;
+  letter-spacing: 0.2px;
 }
 
 .movie-release-date {
   color: #666;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -60,7 +63,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: background 0.5s ease;
+  transition: background 0.7s ease;
   padding: 5px;
 }
 
@@ -82,16 +85,18 @@
 
 .skeleton {
   background-color: #d3d3d3;
-  border-radius: 8px;
+  border-radius: 15px;
   display: flex;
 }
+
 .skeleton-title,
 .skeleton-info {
   flex: 1;
   justify-items: center;
   background-color: #d3d3d3;
-  border-radius: 8px;
   display: flex;
+  margin-bottom: 10px;
+  padding: 2px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -104,5 +109,8 @@
   .movie-title,
   .movie-rating {
     margin-top: 10px;
+  }
+  .skeleton-title {
+    min-width: 52vw;
   }
 }

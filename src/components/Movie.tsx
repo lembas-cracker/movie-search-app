@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Movie.css";
-import Skeleton from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 interface MovieProps {
   id: number;
@@ -19,13 +20,10 @@ const Movie: React.FC<MovieProps> = ({ id, title, overview, poster_path, release
 
   const setCSSProgressRing = (rating: number) => {
     const ring = ringRef.current;
-
     // Cap the rating between 0 and 10
     rating = Math.max(0, Math.min(10, rating));
-
     // Calculate the percentage (0-100) based on the rating (0-10)
     const percentage = (rating / 10) * 100;
-
     // Update the CSS variable and the text
     ring?.style.setProperty("--percentage", "" + percentage);
   };
@@ -36,7 +34,9 @@ const Movie: React.FC<MovieProps> = ({ id, title, overview, poster_path, release
 
   return (
     <div className="movie-card">
-      {(loading || isImageLoading) && <Skeleton height={"300px"} width={"200px"} className="skeleton" />}
+      {(loading || isImageLoading) && (
+        <Skeleton height={"300px"} width={"200px"} className="skeleton" highlightColor="lightgrey" />
+      )}
 
       {!loading && (
         <div className="movie-img-container" style={isImageLoading ? { display: "none" } : {}}>
@@ -60,8 +60,8 @@ const Movie: React.FC<MovieProps> = ({ id, title, overview, poster_path, release
         )}
         {loading ? (
           <>
-            <Skeleton count={3} className="skeleton-info" width={"20vw"} />
-            <Skeleton circle width={30} height={30} className="skeleton-info" />
+            <Skeleton count={3} width={"20vw"} className="skeleton-info" />
+            <Skeleton circle width={"30vw"} height={"30vh"} className="skeleton-info-circle" />
           </>
         ) : (
           <>
