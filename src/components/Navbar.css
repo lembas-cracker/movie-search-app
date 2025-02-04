@@ -1,13 +1,19 @@
 .nav-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  padding: 20px 0 20px 260px;
+  padding: 20px 0 20px 0;
   background-color: #171b24;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   color: seashell;
+}
+.nav-wrapper {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   gap: 10px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .nav-logo {
@@ -19,38 +25,33 @@
 
 .nav-item {
   cursor: pointer;
-  padding: 10px 15px 10px 15px;
-  margin-right: 10px;
+  display: flex;
+  align-items: end;
   color: seashell;
   font-size: 18px;
   letter-spacing: 0.5px;
   font-weight: 500;
 }
-.nav-item:hover {
-  background-color: #2f3950;
-  border-radius: 50px;
+.nav-text:hover {
+  color: #d7d7d7;
   transition: all 0.3s ease;
-}
-.nav-item.active {
-  background-color: #2f3950;
-  border-radius: 50px;
 }
 
 .nav-text {
-  padding: 3px 10px 0 0;
+  padding: 0 10px 0 10px;
   letter-spacing: 0.5px;
   font-weight: 500;
   font-size: 15px;
   color: seashell;
 }
 
-.nav-container img {
+.nav-icon {
   padding-top: 5px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .nav-container {
-    padding: 20px 10px 20px 40px;
+    padding: 20px 10px 20px 0;
     gap: 5px;
   }
 

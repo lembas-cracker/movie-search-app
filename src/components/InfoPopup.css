@@ -1,27 +1,17 @@
-.info-icon {
-  font-size: 18px;
-  cursor: pointer;
-  color: #555;
+.info-container {
+  display: flex;
+  align-items: end;
 }
 
-/*.info-message {
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  border-radius: 4px;
-  z-index: 100;
-  opacity: 0.9;
-  width: 500px;
-  max-height: 150px;
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+.info {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
 }
-*/
+.info-icon {
+  cursor: pointer;
+}
+
 #my-tooltip {
   padding: 15px;
   max-height: 150px;
